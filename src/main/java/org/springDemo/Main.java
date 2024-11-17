@@ -17,6 +17,5 @@ public class Main {
 
         Alien alien2 = (Alien) context.getBean("alien");
         System.out.println(alien2.age);
-
     }
 }
