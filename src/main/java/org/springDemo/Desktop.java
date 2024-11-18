@@ -1,9 +1,9 @@
 package org.springDemo;
 
-public class Laptop implements Computer {
+public class Desktop implements Computer {
 
-    public Laptop() {
-        System.out.println("Laptop created");
+    public Desktop() {
+        System.out.println("Desktop created");
     }
 
     @Override

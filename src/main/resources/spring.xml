@@ -6,7 +6,11 @@
     <!--<bean id="alien" class="org.springDemo.Alien" scope="singleton">
     </bean>-->
 
-    <bean id="alien" class="org.springDemo.Alien">
+    <bean id="alien" class="org.springDemo.Alien" autowire="byType">
+
+        <property name="age" value="21"/>
+        <!--<property name="com" ref="lap"/>-->
+
         <!-- This calls setter injection when start-->
         <!--<property name="age" value="21"></property>-->
 
@@ -26,11 +30,11 @@
         <!-- <constructor-arg index="1" ref="lap"/>-->
 
         <!-- Constructor injection (use name) -->
-        <constructor-arg name="lap" ref="lap"/>
-        <constructor-arg name="age" value="21"/>
+        <!-- <constructor-arg name="lap" ref="lap"/>-->
+        <!-- <constructor-arg name="age" value="21"/>-->
     </bean>
 
-    <bean id="lap" class="org.springDemo.Laptop" scope="prototype">
+    <bean id="com" class="org.springDemo.Laptop" scope="prototype">
     </bean>
 
 </beans>
