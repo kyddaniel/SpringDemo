@@ -3,7 +3,7 @@ package org.springDemo;
 public class Alien {
 
     private int age;
-    private Laptop laptop = new Laptop();
+    private Laptop laptop;
 
     public int getAge() {
         return age;
