@@ -13,7 +13,7 @@ public class Main {
         Alien alien1 = (Alien) context.getBean("alien");
         //alien1.age = 1;
         System.out.println(alien1.getAge());
-        //alien.code();
+        alien1.code();
 
         Alien alien2 = (Alien) context.getBean("alien");
         //System.out.println(alien2.age);

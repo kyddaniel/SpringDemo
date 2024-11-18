@@ -3,6 +3,7 @@ package org.springDemo;
 public class Alien {
 
     private int age;
+    private Laptop laptop = new Laptop();
 
     public int getAge() {
         return age;
@@ -13,6 +14,14 @@ public class Alien {
         this.age = age;
     }
 
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     public Alien() {
         this.age = 0;
         System.out.println("object created");
@@ -20,5 +29,6 @@ public class Alien {
 
     public void code() {
         System.out.println("Coding");
+        laptop.compile();
     }
 }

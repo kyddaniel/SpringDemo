@@ -9,6 +9,9 @@
     <bean id="alien" class="org.springDemo.Alien">
         <!-- This calls setter injection when start-->
         <property name="age" value="21"></property>
+
+        <!-- Assign a reference (inject a reference of other beans)-->
+        <property name="laptop" ref="lap"></property>
     </bean>
 
     <bean id="lap" class="org.springDemo.Laptop" scope="prototype">
