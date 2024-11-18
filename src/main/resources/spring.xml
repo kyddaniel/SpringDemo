@@ -3,7 +3,12 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="org.springDemo.Alien" scope="singleton">
+    <!--<bean id="alien" class="org.springDemo.Alien" scope="singleton">
+    </bean>-->
+
+    <bean id="alien" class="org.springDemo.Alien">
+        <!-- This calls setter injection when start-->
+        <property name="age" value="21"></property>
     </bean>
 
     <bean id="lap" class="org.springDemo.Laptop" scope="prototype">
