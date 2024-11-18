@@ -8,10 +8,26 @@
 
     <bean id="alien" class="org.springDemo.Alien">
         <!-- This calls setter injection when start-->
-        <property name="age" value="21"></property>
+        <!--<property name="age" value="21"></property>-->
 
         <!-- Assign a reference (inject a reference of other beans)-->
-        <property name="laptop" ref="lap"></property>
+        <!--<property name="laptop" ref="lap"/>-->
+
+        <!-- Constructor injection (the orders of arg matters!) -->
+        <!-- <constructor-arg value="21"/>-->
+        <!-- <constructor-arg ref="lap"/>-->
+
+        <!-- Constructor injection (use type) -->
+        <!-- <constructor-arg type="org.springDemo.Laptop" value="21"/>-->
+        <!-- <constructor-arg type="int" ref="lap"/>-->
+
+        <!-- Constructor injection (use index) -->
+        <!-- <constructor-arg index="0" value="21"/>-->
+        <!-- <constructor-arg index="1" ref="lap"/>-->
+
+        <!-- Constructor injection (use name) -->
+        <constructor-arg name="lap" ref="lap"/>
+        <constructor-arg name="age" value="21"/>
     </bean>
 
     <bean id="lap" class="org.springDemo.Laptop" scope="prototype">
