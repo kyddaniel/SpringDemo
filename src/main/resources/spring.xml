@@ -9,6 +9,10 @@
     <bean id="alien" class="org.springDemo.Alien" autowire="byType">
 
         <property name="age" value="21"/>
+        <property name="com">
+            <!-- Create an inner bean that can only be access by the specific outer bean -->
+            <bean id="innerLaptop" class="org.springDemo.Laptop"/>
+        </property>
         <!--<property name="com" ref="lap"/>-->
 
         <!-- This calls setter injection when start-->
