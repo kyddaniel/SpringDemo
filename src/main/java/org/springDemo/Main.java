@@ -10,12 +10,14 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        Alien alien1 = (Alien) context.getBean("alien");
-        //alien1.age = 1;
-        //System.out.println(alien1.getAge());
+        // Alien alien1 = (Alien) context.getBean("alien"); // returns Object, need to do type cast
+        Alien alien1 = context.getBean("alien", Alien.class); // can specify type
         alien1.code();
 
         Alien alien2 = (Alien) context.getBean("alien");
         //System.out.println(alien2.age);
+
+        Computer computer = context.getBean(Computer.class); // find bean by type
+        Desktop desktop = context.getBean(Desktop.class); // find bean by type
     }
 }
