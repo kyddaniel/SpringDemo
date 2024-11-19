@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean
+    @Bean(name = {"desktop1", "desktop2"})
+    //@Bean <= default name is method name (i.e. desktop)
     public Desktop desktop() {
         return new Desktop();
     };

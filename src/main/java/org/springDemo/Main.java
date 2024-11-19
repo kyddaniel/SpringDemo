@@ -14,7 +14,7 @@ public class Main {
         // uses JAVA configuration (spring.xml)
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop desktop = context.getBean(Desktop.class);
+        Desktop desktop = context.getBean("desktop1", Desktop.class);
         desktop.compile();
 
 
