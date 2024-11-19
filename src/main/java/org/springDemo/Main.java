@@ -1,6 +1,8 @@
 package org.springDemo;
 
+import org.springDemo.config.AppConfig;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,8 +10,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
+        // uses JAVA configuration (spring.xml)
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Desktop desktop = context.getBean(Desktop.class);
+        desktop.compile();
+
+
+        // uses XML configuration (spring.xml)
+        //==============================================================================================================
+        //ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        /*
         // Alien alien1 = (Alien) context.getBean("alien"); // returns Object, need to do type cast
         Alien alien1 = context.getBean("alien", Alien.class); // can specify type
         alien1.code();
@@ -19,5 +31,7 @@ public class Main {
 
         Computer computer = context.getBean(Computer.class); // find bean by type
         Desktop desktop = context.getBean(Desktop.class); // find bean by type
+        //==============================================================================================================
+         */
     }
 }
