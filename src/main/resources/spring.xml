@@ -31,11 +31,17 @@
 
         <!-- Constructor injection (use name) -->
         <!-- <constructor-arg name="lap" ref="lap"/>-->
-        <!-- <constructor-arg name="age" value="21"/>-->
+<!--         <constructor-arg name="age" value="21"/>-->
     </bean>
 
-    <bean id="com" class="org.springDemo.Laptop" scope="prototype">
+    <bean id="com" class="org.springDemo.Desktop" primary="true">
     </bean>
+
+    <bean id="com1" class="org.springDemo.Laptop">
+    </bean>
+
+<!--    <bean id="com" class="org.springDemo.Laptop" scope="prototype">-->
+<!--    </bean>-->
 
 </beans>
 
