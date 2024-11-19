@@ -14,8 +14,11 @@ public class Main {
         // uses JAVA configuration (spring.xml)
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        Alien alien1 = context.getBean("alien", Alien.class); // can specify type
+        alien1.code();
+
         Desktop desktop = context.getBean("desktop1", Desktop.class);
-        desktop.compile();
+        //desktop.compile();
 
 
         // uses XML configuration (spring.xml)
