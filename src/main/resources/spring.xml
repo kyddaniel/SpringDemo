@@ -37,7 +37,8 @@
     <bean id="com" class="org.springDemo.Desktop" primary="true">
     </bean>
 
-    <bean id="com1" class="org.springDemo.Laptop">
+    <!-- If lazy-init is true, object is created only when is needed (it is still singleton) -->
+    <bean id="com1" class="org.springDemo.Laptop" lazy-init="true">
     </bean>
 
 <!--    <bean id="com" class="org.springDemo.Laptop" scope="prototype">-->
