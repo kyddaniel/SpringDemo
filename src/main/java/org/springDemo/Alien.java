@@ -1,5 +1,7 @@
 package org.springDemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -8,6 +10,9 @@ import java.beans.ConstructorProperties;
 public class Alien {
 
     private int age;
+
+    @Autowired // field injection
+    @Qualifier("laptop")
     private Computer com;
 
     public Alien() {

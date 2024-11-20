@@ -17,7 +17,7 @@ public class Main {
         Alien alien1 = context.getBean("alien", Alien.class); // can specify type
         alien1.code();
 
-        Desktop desktop = context.getBean("desktop1", Desktop.class);
+        Desktop desktop = context.getBean("desktop", Desktop.class);
         //desktop.compile();
 
 
